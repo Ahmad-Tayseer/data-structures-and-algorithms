@@ -238,11 +238,6 @@ const totalSum = (data) => {
   return data['effort'] + data['baseStat'];
 };
 
-// function Object(name, total) {
-//   this.name = name;
-//   this.total = total;
-// }
-
 const newObject = (name, total) => {
   const obj1 = {
     'name': name,
