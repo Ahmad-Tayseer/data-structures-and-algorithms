@@ -300,7 +300,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-describe('Testing challenge 7', () => {
+xdescribe('Testing challenge 7', () => {
   test('It should match any of the acceptable inputs', () => {
     expect(matchMonth('Oct')).toBeTruthy();
     expect(matchMonth('oct')).toBeTruthy();
@@ -308,7 +308,7 @@ describe('Testing challenge 7', () => {
     expect(matchMonth('october')).toBeTruthy();
   });
 
-  xtest('It should not match anything other than the acceptable inputs', () => {
+  test('It should not match anything other than the acceptable inputs', () => {
     expect(matchMonth('November')).toBeFalsy();
     expect(matchMonth('nov')).toBeFalsy();
     expect(matchMonth(123)).toBeFalsy();
