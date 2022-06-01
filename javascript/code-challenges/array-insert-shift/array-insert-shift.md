@@ -6,13 +6,13 @@ Whiteboard Process:
 
 ***
 
-reverseArray function code:
+insertShiftArray function code:
 
 ![](./Screenshot_2.png)
 
 ***
 
-reverseArray function result:
+insertShiftArray function result:
 
 ![](./Screenshot_3.png)
 
