@@ -316,6 +316,7 @@ describe('Testing challenge 2', () => {
   });
 });
 
+
 describe('Testing challenge 3', () => {
   test('It should add the purchase price', () => {
     expect(addPurchases([{item: 'switch', purchasePrice: 399}, {item: 'toothpaste', purchasePrice: 2}])).toStrictEqual(401);
@@ -323,11 +324,13 @@ describe('Testing challenge 3', () => {
   });
 });
 
+
 describe('Testing challenge 4', () => {
   test('It should return the length of the array', () => {
     expect(countNumberOfElements([1, 2, 3, 4, 5])).toStrictEqual(5);
   });
 });
+
 
 describe('Testing challenge 5', () => {
   test('It should return an array continaing the names of the characters', () => {
