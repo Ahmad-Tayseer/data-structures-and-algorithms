@@ -53,6 +53,19 @@ let characters = [
 ];
 
 const sortByChildren = (charArray) => {
+  return charArray.sort((element1, element2) => {
+    if (element1.children.length < element2.children.length) {
+      return -1;
+    } else if (element1.children.length === element2.children.length) {
+      if (element1.house < element2.house) {
+        return -1;
+      } else {
+        return 1;
+      }
+    } else {
+      return 1;
+    }
+  });
   // Solution code here...
 };
 
@@ -226,7 +239,7 @@ Run your tests from the console: jest challenges-04.solution.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should sort the characters by number of children', () => {
     expect(sortByChildren(characters)[0].name).toStrictEqual('Euron');
     expect(sortByChildren(characters)[0].children.length).toStrictEqual(0);
