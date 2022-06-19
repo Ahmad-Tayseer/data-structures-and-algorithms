@@ -42,12 +42,12 @@ inserBefore function: insert a new node before the node that have a value equals
 insertAfter function: insert a new node after the node that have a value equals to the value given in the arguments.
 <!-- Description of each method publicly available to your Linked List -->
 
-## Append Whilte Board
+## append White Board
 
 ![](./White%20Board%20Images/Screenshot_12.png)
 
 
-## Insert Before Whilte Board
+## insertBefore White Board
 
 ![](./White%20Board%20Images/Screenshot_13.png)
 
@@ -70,7 +70,7 @@ kthFromEnd function: Time: O(n) space: O(1).
 kthFromEnd function: return the node’s value that is k places from the tail of the linked list.
 <!-- Description of each method publicly available to your Linked List -->
 
-## kthFromEnd Whilte Board
+## kthFromEnd White Board
 
 ![](./White%20Board%20Images/Screenshot_18.png)
 
@@ -93,6 +93,6 @@ zipLists function: zip the two linked lists given as an arguments together into 
 
 <!-- Description of each method publicly available to your Linked List -->
 
-## kthFromEnd Whilte Board
+## zipLists White Board
 
 ![](./White%20Board%20Images/Screenshot_20.png)
