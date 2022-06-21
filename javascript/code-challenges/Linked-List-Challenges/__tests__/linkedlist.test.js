@@ -146,7 +146,7 @@ describe('Linked List Test', () => {
     Ll.append('1');
     Ll.append('2');
     Ll.append('3');
-    expect(Ll.kthFromEnd(3)).toEqual('1');
+    expect(Ll.kthFromEnd(2)).toEqual('1');
   });
 
   test('Where k is not a positive integer', () => {
@@ -160,7 +160,7 @@ describe('Linked List Test', () => {
   test('Where the linked list is of a size 1', () => {
     const Ll = new LinkedList();
     Ll.append('1');
-    expect(Ll.kthFromEnd(1)).toEqual('1');
+    expect(Ll.kthFromEnd(0)).toEqual('1');
   });
 
   test('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list', () => {
@@ -187,6 +187,57 @@ describe('Linked List Test', () => {
     Ll.zipLists(list1, list2);
     expect(Ll.head.value).toEqual('1');
     expect(Ll.toString()).toEqual('{1} -> {4} -> {2} -> {5} -> {3} -> NULL');
+  });
+
+  // ============================================================================================================== //
+
+  test('test palindrome function', () => {
+    const Ll = new LinkedList();
+    const list = new LinkedList();
+    list.append('t');
+    list.append('a');
+    list.append('c');
+    list.append('o');
+    list.append('c');
+    list.append('a');
+    list.append('t');
+    expect(Ll.palindrome(list)).toEqual(true);
+  });
+
+  test('test palindrome function', () => {
+    const Ll = new LinkedList();
+    const list = new LinkedList();
+    list.append('m');
+    list.append('o');
+    list.append('o');
+    list.append('m');
+    expect(Ll.palindrome(list)).toEqual(true);
+  });
+
+  test('test palindrome function', () => {
+    const Ll = new LinkedList();
+    const list = new LinkedList();
+    list.append('h');
+    list.append('o');
+    list.append('u');
+    list.append('s');
+    list.append('e');
+    expect(Ll.palindrome(list)).toEqual(false);
+  });
+
+  // ============================================================================================================== //
+
+  test('test palindrome function', () => {
+    const Ll = new LinkedList();
+    const list = new LinkedList();
+    list.append('h');
+    list.append('o');
+    list.append('u');
+    list.append('s');
+    list.append('e');
+    Ll.reverse(list);
+    // expect(Ll.head).toEqual('e');
+    expect(Ll.toString()).toEqual('{e} -> {d} -> {c} -> {b} -> {a} -> NULL');
   });
 
 });

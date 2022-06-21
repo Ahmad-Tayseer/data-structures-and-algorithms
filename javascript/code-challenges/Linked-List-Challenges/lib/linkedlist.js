@@ -116,10 +116,24 @@ class LinkedList {
     let nodeIndex = this.length - index;
     let i = 1;
     let current = this.head;
-    if (index < 0 || index > this.length) {
+    if (index < 0 || index >= this.length) {
       return 'Exception';
     } else {
       while(i < nodeIndex) {
+        current = current.next;
+        i++;
+      }
+      return current.value;
+    }
+  }
+
+  kthFromStart(index) {
+    let i = 0;
+    let current = this.head;
+    if (index < 0 || index >= this.length) {
+      return 'Exception';
+    } else {
+      while(i < index) {
         current = current.next;
         i++;
       }
@@ -150,6 +164,42 @@ class LinkedList {
       i++;
     }
     return this;
+  }
+
+  palindrome(list) {
+    let result = true;
+    if (list.head.value === list.tail.value) {
+      for (let i = 1; i < Math.round(list.length / 2); i++) {
+        if (list.kthFromStart(i) === list.kthFromEnd(i)) {
+          result = true;
+        } else {
+          result = false;
+          break;
+        }
+      }
+    } else {
+      result = false;
+    }
+    return result;
+  }
+
+  reverse(list) {
+    let prev = null;
+    let next = null;
+    let currentList = list.head;
+    if (currentList !== null) {
+      this.head = list.tail;
+      let current = this.head;
+      while (currentList.next) {
+        next = currentList.next;
+        prev = currentList;
+        current.next = prev;
+        current = next;
+      }
+      prev = list.head;
+      return this;
+    }
+    return 'This Linked List is empty';
   }
 
 }
