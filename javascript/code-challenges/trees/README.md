@@ -12,6 +12,8 @@ Create Node, BinaryTree and BinarySearchTree classes and create preOrder(),inOrd
 
 - For add(value) and contains(value) functions, we needed O(log(n)) as a time complexity because inserting and searching in a Binary Search Tree depends on the tree's height which equals to log(n).
 
+- For maxValue(root): space: O(n), time: O(n).
+
 ## API
 
 - preOrder(): Traverse a tree >> root, left, right.
@@ -19,3 +21,4 @@ Create Node, BinaryTree and BinarySearchTree classes and create preOrder(),inOrd
 - postOrder(): Traverse a tree >> left, right, root.
 - add(value): Add a node in the correct location in the binary search tree.
 - contains(value): Check whether or not the value is in the binary search tree at least once.
+- maxValue(root): Find the max value in a tree.

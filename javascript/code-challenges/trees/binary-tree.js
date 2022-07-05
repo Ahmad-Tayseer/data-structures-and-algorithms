@@ -37,6 +37,19 @@ class binaryTree {
     traverse(this.root);
     return result;
   }
+
+  maxValue(root) {
+    if (root === null) return 'Exception';
+    else {
+      let maxNum = root.value;
+      let right = this.maxValue(root.right);
+      let left = this.maxValue(root.left);
+      if (right > maxNum) maxNum = right;
+      if (left > maxNum) maxNum = left;
+      return maxNum;
+    }
+  }
+
 }
 
 module.exports = binaryTree;
