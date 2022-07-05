@@ -22,3 +22,7 @@ Create Node, BinaryTree and BinarySearchTree classes and create preOrder(),inOrd
 - add(value): Add a node in the correct location in the binary search tree.
 - contains(value): Check whether or not the value is in the binary search tree at least once.
 - maxValue(root): Find the max value in a tree.
+
+Whiteboard max function:
+
+![](./Screenshot_24.png)
