@@ -71,4 +71,9 @@ describe('TREES TEST', () => {
     const newTree = new BinaryTree();
     expect(newTree.maxValue(newTree.root)).toEqual('Exception');
   });
+  test('Can successfully resturn a collection from a breadth first order', () => {
+    let expectedOutput = [1, 2, 3, 6, 4, 5, 7, 8, 9];
+    let breadth = tree.breadthFirst(tree);
+    expect(breadth).toEqual(expectedOutput);
+  });
 });
