@@ -52,32 +52,19 @@ class binaryTree {
     }
   }
 
-  // breadthFirst(tree) {
-  //   let breadth = new Queue();
-  //   let result = [];
-  //   breadth.enqueue(tree.root);
-  //   while (breadth.front !== null && breadth.rear !== null) {
-  //     let frontQueue = breadth.dequeue();
-  //     result.push(frontQueue.value);
-  //     if (frontQueue.left !== null) breadth.enqueue(frontQueue.left);
-  //     if (frontQueue.right !== null) breadth.enqueue(frontQueue.right);
-  //   }
-  //   return result;
-  // }
-
   breadthFirst(tree) {
-    let queue = new Queue();
+    let breadth = new Queue();
     let result = [];
-    queue.enqueue(tree.root);
-    while (queue.front !== null && queue.rear !== null) {
-      let dequeued = queue.dequeue();
-      result.push(dequeued.value);
-      if (dequeued.left !== null) queue.enqueue(dequeued.left);
-      if (dequeued.right !== null) queue.enqueue(dequeued.right);
+    breadth.enqueue(tree.root);
+    while (breadth.front !== null && breadth.rear !== null) {
+      let frontQueue = breadth.dequeue();
+      result.push(frontQueue.value);
+      if (frontQueue.left !== null) breadth.enqueue(frontQueue.left);
+      if (frontQueue.right !== null) breadth.enqueue(frontQueue.right);
     }
     return result;
   }
-
 }
 
 module.exports = binaryTree;
+
