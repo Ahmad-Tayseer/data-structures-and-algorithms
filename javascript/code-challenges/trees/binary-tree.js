@@ -64,6 +64,30 @@ class binaryTree {
     }
     return result;
   }
+
+  oddSumm(tree) {
+    let queue = new Queue();
+    let sum = 0;
+    queue.enqueue(tree.root);
+    while (queue.front !== null && queue.rear !== null) {
+      let frontQueue = queue.dequeue();
+      if (frontQueue.value % 2 !== null) sum = sum + frontQueue.value;
+      if (frontQueue.left !== null) queue.enqueue(frontQueue.left);
+      if (frontQueue.right !== null) queue.enqueue(frontQueue.right);
+    }
+    return sum;
+  }
+
+  numberOFFiles(tree1, tree2) {
+    let queue = new Queue();
+    let counter1 = 0;
+    let counter2 = 0;
+    queue.enqueue(tree1.root);
+    while (queue.front !== null && queue.rear !== null) {
+      let frontQueue = queue.dequeue();
+      if (frontQueue.value )
+    }
+  }
 }
 
 module.exports = binaryTree;
