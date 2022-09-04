@@ -23,3 +23,9 @@ create the method that will traverse a graph using Breadth First.
     Big O of time: O(n^2).
 
     Big O of space: O(n^2).
+
+***
+
+## White Board
+
+![](./Screenshot_34.png)
