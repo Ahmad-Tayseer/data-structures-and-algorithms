@@ -12,19 +12,15 @@ class HashTable {
     }, 0);
     const multiPrime = asciicodeSum * 599;
     const theIndex = multiPrime % this.size;
-    console.log(theIndex);
     return theIndex;
   }
 
   set(key, value) {
     let hashIndex = this.hash(key);
-    console.log({ hashIndex });
-    if (!this.table[hashIndex]) {
+    if(!this.table[hashIndex]) {
       this.table[hashIndex] = new Linkedlist();
     }
-
-    let entryData = { [key]: value };
-    this.table[hashIndex].append(entryData);
+    this.table[hashIndex].append({ [key]: value });
   }
 
   get(key) {
@@ -45,29 +41,33 @@ class HashTable {
 
   contains(key) {
     let hashIndex = this.hash(key);
-    if (this.table[hashIndex]) {
-      let current = this.table[hashIndex].head;
+    let bucket = this.table[hashIndex];
+    if (bucket) {
+      let current = bucket.head;
       while (current) {
-        if (current.value[key]) return true;
-        current = current.next;
+        if (current.value[key]) {
+          return true;
+        } else {
+          current = current.next;
+        }
       }
       return false;
-    } else {
-      return false;
     }
+    return false;
   }
 
   keys() {
-    let arr =[];
-    for (const key in this.values) {
-      if (this.values.hasOwnProperty(key)) {
-
-        arr.push(key);
+    let keys = [];
+    for (let i = 0; i < this.table.length; i++) {
+      if (this.table[i]) {
+        keys.push(this.table[i].keys());
       }
     }
-    console.log(arr);
-    return arr;
+    return keys;
   }
+}
+
+function repeatedWord(str) {
 
 }
 
