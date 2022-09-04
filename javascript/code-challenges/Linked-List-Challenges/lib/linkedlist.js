@@ -55,6 +55,16 @@ class LinkedList {
     return result;
   }
 
+  keys() {
+    let values = [];
+    let current = this.head;
+    while (current) {
+      values.push([Object.keys(current.value)[0]]);
+      current = current.next;
+    }
+    return values;
+  }
+
   toString() {
     let llString = '';
     if (this.head) {

@@ -11,9 +11,7 @@ HashTable1.set('c', '3');
 
 describe('Testing HashTables', () => {
   it('Setting a key/value to your hashtable results in the value being in the data structure', () => {
-    expect(Object.values(HashTable1.table[16].head.value).join('')).toEqual(
-      '1'
-    );
+    expect(HashTable1.get('a')).toEqual('1');
   });
 
   it('Retrieving based on a key returns the value stored', () => {
